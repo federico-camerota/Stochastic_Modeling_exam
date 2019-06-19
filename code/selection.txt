@@ -1,0 +1,6 @@
+['L'   , 'HES' , 'BIIB', 'WMT' , 'PBCT', 'BXP' , 'PDCO', 'CI'  , 'AXP' , 'CDNS', 'KLAC', 'AMG' , 'ABBV', 'GLW' , 'BEN',  'UTX' , 'ECL', 
+'TXT' , 'AMP' , 'MGM' , 'AAPL', 'EFX' , 'ESRX', 'SNA' , 'AMGN', 'WYN' , 'LB'  , 'FL'  , 'DRE' , 'IPG' , 'OKE' , 'FAST,' 'COF' , 'TAP', 
+'REGN', 'ALL' , 'HAS' , 'HII' , 'PPL' , 'WMB' , 'MAR' , 'CHD' , 'CRM' , 'TRIP', 'FB'  , 'CLX' , 'GS'  , 'BWA' , 'PNW',  'GIS' , 'A'  , 
+'C'   , 'DISH', 'RTN' , 'ROP' , 'PFE' , 'HCN' , 'RL'  , 'NEM' , 'FRT' , 'COG' , 'AVGO', 'MO'  , 'WHR' , 'BAC' , 'ROK',  'PRGO', 'MPC', 
+'NKE' , 'TEL' , 'PHM' , 'WFC' , 'MON' , 'LH'  , 'ETFC', 'CBOE', 'LRCX', 'MS'  , 'K'   , 'APD' , 'COST', 'MCK' , 'XEC',  'INTC', 'LLL', 
+'DLTR', 'PSA' , 'RHI' , 'VLO' , 'JBHT', 'APH' , 'DTE' , 'QCOM', 'GE'  , 'EMN' , 'NWL' , 'SEE' , 'BA'  , 'GRMN', 'STT']
