@@ -2,6 +2,8 @@
 \usetheme{Frankfurt}
 
 \usepackage{amsmath}
+\usepackage{graphicx}
+
 \title{A Markov Chains Application To Stock Markets}
 \author{Federico Camerota}
 \date{}
@@ -147,21 +149,71 @@
 		\end{frame}
 	
 		\begin{frame}{Portfolio selection results}
-			As a benchmark we consider a strategy that invests the same amount of capital on each stock in the market.
-		
+		\begin{itemize}
+			\item As a benchmark we consider a strategy that invests the same amount of capital on each stock in the market.
+			\item The best setting is the one using the mean as $\delta$ and a re-calibration period of 15 days.
+			\item We tested the method with the above setting on a sample of 30 days with a time horizon of 120 days.
+		\end{itemize}
+			\begin{center}
+				\begin{tabular}{|c|c|c|c|c|}
+					\hline
+					Method & Avg. Return & Return std & Min return & Max return\\
+					\hline
+					\hline
+					Naive & 0.00791 & 0.03271 & -0.1562 & 0.1601\\
+					\hline
+					StockMC & 0.01022 & 0.05621 & -0.1923 & 0.1826\\
+					\hline
+					StockMC2 & 0.006692 & 0.09676 & -0.4221 & 0.3298\\
+					\hline
+				\end{tabular}
+			\end{center}
 		\end{frame}
 	
 		\begin{frame}{Portfolio selection results}
-			We conclude that the model is not that good after all.
+		\begin{itemize}
+			\item The variability of the obtained returns is quite high.
+			\item The overall return is not much better than the one obtained with the benchmark.
+			\item The method doesn't seem to improve on a strategy that only uses time series data.
+		\end{itemize}
 		\end{frame}
 	
 		\begin{frame}{Trajectories experiment}
 		\begin{itemize}
-			\item We consider the same time horizons used in the portfolio selection experiment and simulate the trajectories of a sample of stock starting in 3 randomly selected time points.
-			
-		\end{itemize}
-			
-		\end{frame}
+			\item In this problem the best setting appears to be the one using the mean as $\delta$ and a window of 7 days.
+			\item Using the above setting we tested the ability of the method to predict the price trajectories of a sample of stocks.
+		\end{itemize}	
+			 \begin{center}
+			 	\begin{tabular}{|c|c|c|c|c|}
+			 		\hline
+			 		Qty. & Average & Std. Deviation & Minimum & Maximum\\
+			 		\hline
+			 		\hline
+			 		MSE & 6.0319   & 28.3576        & 0.00055 & 803.9234\\
+			 		\hline
+			 	\end{tabular}
+			 \end{center}
+		\end{frame}	
 	
+	\begin{frame}{Trajectories experiment}
+	\begin{itemize}
+		\item The results show that the model is not able to predict properly future price trends.
+		\item It appears that the evolution scheme used is too rigid and the average simulated trajectories tend to be quite flat.
+	\end{itemize}
+	\begin{figure}
+	\includegraphics[width=0.5\textwidth]{../images/best_mse.png}%
+	\includegraphics[width=0.5\textwidth]{../images/worst_mse.png}
+	\caption{Best and worst case in terms of MSE}
+	\end{figure}
+	\end{frame}
+
+	\begin{frame}{Conclusions}
+	\begin{itemize}
+		\item We conclude that the proposed model doesn't work properly in the studied problems.
+		\item A possible improvement in the portfolio problem could be the use of a better selection strategy.
+		\item In the trajectories problem the model should be able to be more flexible, this could be achieved by
+			  using higher order MCs or some other strategy to take into account the price trends.
+	\end{itemize}
+	\end{frame}
 
 \end{document}
